@@ -84,7 +84,7 @@ export default function Home() {
 
           {/* Nav */}
           <nav style={{ display: 'flex', gap: '36px' }}>
-            {[['TOP', 'top'], ['ABOUT', 'about'], ['WORKS', 'works'], ['CONTACT', 'contact']].map(([label, id]) => (
+            {[['TOP', 'top'], ['ABOUT', 'about'], ['CONTACT', 'contact']].map(([label, id]) => (
               <a key={id} href={`#${id}`} onClick={e => goTo(e, id)} className="nav-link"
                 style={{ fontSize: '11px', letterSpacing: '.2em', color: 'var(--text-dim)' }}>
                 {label}
@@ -202,39 +202,6 @@ export default function Home() {
                 Utopia&nbsp;/&nbsp;BABEL no TOH&nbsp;/&nbsp;ゼンジン未到とイ/ミュータブル
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* ── WORKS ── */}
-        <section id="works" style={{ padding: '80px 0', borderTop: '1px solid var(--border)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '48px' }}>
-            <p style={{ fontSize: '10px', letterSpacing: '.45em', color: 'var(--text-dim)' }}>WORKS</p>
-            <p style={{ fontSize: '10px', letterSpacing: '.2em', color: 'var(--text-faint)' }}>VIEW MORE</p>
-          </div>
-
-          <div style={{ display: 'grid', gap: '1px', background: 'var(--border)' }}>
-            {[
-              { num: '01', title: 'Nijisanji Data Lab', desc: 'Data analysis platform', href: '#' },
-            ].map(({ num, title, desc, href }) => (
-              <a key={num} href={href} className="work-row" style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                padding: '32px 28px', background: 'var(--bg)',
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '36px' }}>
-                  <span style={{ fontSize: '11px', letterSpacing: '.2em', color: 'var(--text-faint)', minWidth: '24px' }}>{num}</span>
-                  <div>
-                    <p style={{ fontSize: '20px', fontWeight: 300, color: 'var(--text)', letterSpacing: '.04em', marginBottom: '6px' }}>{title}</p>
-                    <p style={{ fontSize: '11px', color: 'var(--text-faint)', letterSpacing: '.12em' }}>{desc}</p>
-                  </div>
-                </div>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="rgba(240,240,248,0.3)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            ))}
           </div>
         </section>
 

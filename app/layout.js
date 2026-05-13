@@ -1,9 +1,10 @@
-import { Noto_Sans_JP } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
-const notoSansJP = Noto_Sans_JP({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
 })
 
 export const metadata = {
@@ -14,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      <body className={notoSansJP.className}>{children}</body>
+      <body className={cormorant.className}>{children}</body>
     </html>
   )
 }
