@@ -1,9 +1,9 @@
-import { Playfair_Display } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['300', '400'],
 })
 
 export const metadata = {
@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={playfair.variable}>{children}</body>
+    <html lang="ja">
+      <body className={notoSansJP.className}>{children}</body>
     </html>
   )
 }
